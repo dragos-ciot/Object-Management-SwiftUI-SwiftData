@@ -75,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50BBFFC2BD2689300E00D7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C58270792BD249D000E2059B /* ObjectListScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C582706B2BD249D000E2059B = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +106,9 @@
 		C58270762BD249D000E2059B /* ObjectManagement */ = {
 			isa = PBXGroup;
 			children = (
+				C50BBFFC2BD2689300E00D7F /* Views */,
 				C58270A12BD24B0800E2059B /* Domain */,
 				C58270772BD249D000E2059B /* ObjectManagementApp.swift */,
-				C58270792BD249D000E2059B /* ObjectListScreen.swift */,
 				C582707B2BD249D200E2059B /* Assets.xcassets */,
 				C582707D2BD249D200E2059B /* Preview Content */,
 			);
