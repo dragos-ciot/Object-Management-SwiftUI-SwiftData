@@ -10,9 +10,16 @@ import SwiftData
 
 @main
 struct ObjectManagementApp: App {
+    
+    @State
+    private var objectManager = ObjectManager()
+    
     var body: some Scene {
         WindowGroup {
-            ObjectListScreen()
+            NavigationStack {
+                ObjectListScreen()
+            }
+            .environment(objectManager)
         }
         .modelContainer(for: ObjectEntity.self)
     }

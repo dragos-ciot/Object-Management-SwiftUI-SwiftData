@@ -67,13 +67,7 @@ struct ObjectDetailView: View {
                 }
             }
             ToolbarItem(placement: .principal) {
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Text("Add relation")
-                        Image(systemName: "plus.circle.fill")
-                    }
+                AddButton(title: "Add relation") {
                 }
             }
         }

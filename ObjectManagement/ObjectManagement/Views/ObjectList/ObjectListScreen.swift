@@ -15,6 +15,9 @@ struct ObjectListScreen: View {
     @Query
     private var objectsList: [ObjectEntity]
     
+    @State
+    private var shouldPresentAddObjectSheet = false
+    
     var body: some View {
         List {
             ForEach(ObjectType.allCases, id: \.self) { objectType in
@@ -38,14 +41,13 @@ struct ObjectListScreen: View {
         }
         .searchable(text: .constant(""), placement: .toolbar, prompt: Text("Enter your search criteria"))
         .listStyle(.plain)
+        .sheet(isPresented: $shouldPresentAddObjectSheet) {
+            AddObjectSheet()
+        }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button {
-                } label: {
-                    HStack {
-                        Text("Add object")
-                        Image(systemName: "plus.circle.fill")
-                    }
+                AddButton(title: "Add object") {
+                    shouldPresentAddObjectSheet.toggle()
                 }
             }
             ToolbarItem(placement: .topBarLeading) {

@@ -11,6 +11,11 @@
 		C50BC0052BD28C5700E00D7F /* ObjectListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0042BD28C5700E00D7F /* ObjectListRowView.swift */; };
 		C50BC0082BD291E300E00D7F /* ListRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0072BD291E300E00D7F /* ListRowStyle.swift */; };
 		C50BC00A2BD2932B00E00D7F /* ObjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0092BD2932B00E00D7F /* ObjectDetailView.swift */; };
+		C50BC00C2BD2A12100E00D7F /* AddObjectSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC00B2BD2A12100E00D7F /* AddObjectSheet.swift */; };
+		C50BC00E2BD2A20E00E00D7F /* ObjectPropertiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC00D2BD2A20E00E00D7F /* ObjectPropertiesView.swift */; };
+		C50BC0112BD2A6E600E00D7F /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0102BD2A6E600E00D7F /* AddButton.swift */; };
+		C50BC0142BD2A82300E00D7F /* ObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0132BD2A82300E00D7F /* ObjectManager.swift */; };
+		C50BC0162BD2AB3C00E00D7F /* NewObjectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0152BD2AB3C00E00D7F /* NewObjectConfig.swift */; };
 		C58270782BD249D000E2059B /* ObjectManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270772BD249D000E2059B /* ObjectManagementApp.swift */; };
 		C582707A2BD249D000E2059B /* ObjectListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270792BD249D000E2059B /* ObjectListScreen.swift */; };
 		C582707C2BD249D200E2059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C582707B2BD249D200E2059B /* Assets.xcassets */; };
@@ -44,6 +49,11 @@
 		C50BC0042BD28C5700E00D7F /* ObjectListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListRowView.swift; sourceTree = "<group>"; };
 		C50BC0072BD291E300E00D7F /* ListRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowStyle.swift; sourceTree = "<group>"; };
 		C50BC0092BD2932B00E00D7F /* ObjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailView.swift; sourceTree = "<group>"; };
+		C50BC00B2BD2A12100E00D7F /* AddObjectSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddObjectSheet.swift; sourceTree = "<group>"; };
+		C50BC00D2BD2A20E00E00D7F /* ObjectPropertiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectPropertiesView.swift; sourceTree = "<group>"; };
+		C50BC0102BD2A6E600E00D7F /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		C50BC0132BD2A82300E00D7F /* ObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManager.swift; sourceTree = "<group>"; };
+		C50BC0152BD2AB3C00E00D7F /* NewObjectConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectConfig.swift; sourceTree = "<group>"; };
 		C58270742BD249D000E2059B /* ObjectManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58270772BD249D000E2059B /* ObjectManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManagementApp.swift; sourceTree = "<group>"; };
 		C58270792BD249D000E2059B /* ObjectListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListScreen.swift; sourceTree = "<group>"; };
@@ -86,8 +96,11 @@
 		C50BBFFC2BD2689300E00D7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C50BC00F2BD2A6A200E00D7F /* UIComponents */,
 				C50BC0032BD28C3D00E00D7F /* ObjectList */,
 				C50BC0092BD2932B00E00D7F /* ObjectDetailView.swift */,
+				C50BC00B2BD2A12100E00D7F /* AddObjectSheet.swift */,
+				C50BC00D2BD2A20E00E00D7F /* ObjectPropertiesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +131,23 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		C50BC00F2BD2A6A200E00D7F /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C50BC0102BD2A6E600E00D7F /* AddButton.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		C50BC0122BD2A80F00E00D7F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C50BC0132BD2A82300E00D7F /* ObjectManager.swift */,
+				C50BC0152BD2AB3C00E00D7F /* NewObjectConfig.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C582706B2BD249D000E2059B = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +171,7 @@
 		C58270762BD249D000E2059B /* ObjectManagement */ = {
 			isa = PBXGroup;
 			children = (
+				C50BC0122BD2A80F00E00D7F /* Data */,
 				C50BC0002BD28BE900E00D7F /* Helpers */,
 				C50BBFFC2BD2689300E00D7F /* Views */,
 				C58270A12BD24B0800E2059B /* Domain */,
@@ -323,14 +354,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50BC0142BD2A82300E00D7F /* ObjectManager.swift in Sources */,
+				C50BC0162BD2AB3C00E00D7F /* NewObjectConfig.swift in Sources */,
 				C58270A62BD24CA900E2059B /* ObjectType.swift in Sources */,
 				C58270A42BD24B3400E2059B /* ObjectEntity.swift in Sources */,
 				C582707A2BD249D000E2059B /* ObjectListScreen.swift in Sources */,
 				C50BC0082BD291E300E00D7F /* ListRowStyle.swift in Sources */,
 				C58270782BD249D000E2059B /* ObjectManagementApp.swift in Sources */,
 				C50BC0052BD28C5700E00D7F /* ObjectListRowView.swift in Sources */,
+				C50BC00E2BD2A20E00E00D7F /* ObjectPropertiesView.swift in Sources */,
 				C50BC00A2BD2932B00E00D7F /* ObjectDetailView.swift in Sources */,
 				C50BC0022BD28C0000E00D7F /* ModelPreview.swift in Sources */,
+				C50BC00C2BD2A12100E00D7F /* AddObjectSheet.swift in Sources */,
+				C50BC0112BD2A6E600E00D7F /* AddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
