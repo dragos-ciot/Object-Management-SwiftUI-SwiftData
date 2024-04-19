@@ -9,6 +9,9 @@ import SwiftUI
 import SwiftData
 
 struct ObjectListScreen: View {
+    @Environment(\.modelContext)
+    private var modelContext
+    
     @Query
     private var objectsList: [ObjectEntity]
     
@@ -18,7 +21,7 @@ struct ObjectListScreen: View {
                 Section {
                     ForEach(objectsList.filter { $0.type == objectType }) { object in
                         NavigationLink(destination: {
-                            EmptyView()
+                            ObjectDetailView(objectItem: object)
                         }, label: {
                             ObjectListRowView(objectItem: object)
                         })
@@ -31,9 +34,32 @@ struct ObjectListScreen: View {
                     }
                 } footer: {}
             }
+            .onDelete(perform: deleteObjects)
         }
+        .searchable(text: .constant(""), placement: .toolbar, prompt: Text("Enter your search criteria"))
         .listStyle(.plain)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                } label: {
+                    HStack {
+                        Text("Add object")
+                        Image(systemName: "plus.circle.fill")
+                    }
+                }
+            }
+            ToolbarItem(placement: .topBarLeading) {
+                EditButton()
+            }
+        }
         .navigationTitle("Object List")
+    }
+    
+    func deleteObjects(at offsets: IndexSet) {
+        for offset in offsets {
+            let object = objectsList[offset]
+            modelContext.delete(object)
+        }
     }
 }
 
