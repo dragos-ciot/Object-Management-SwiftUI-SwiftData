@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50BC0022BD28C0000E00D7F /* ModelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0012BD28C0000E00D7F /* ModelPreview.swift */; };
+		C50BC0052BD28C5700E00D7F /* ObjectListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0042BD28C5700E00D7F /* ObjectListRowView.swift */; };
+		C50BC0082BD291E300E00D7F /* ListRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50BC0072BD291E300E00D7F /* ListRowStyle.swift */; };
 		C58270782BD249D000E2059B /* ObjectManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270772BD249D000E2059B /* ObjectManagementApp.swift */; };
 		C582707A2BD249D000E2059B /* ObjectListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270792BD249D000E2059B /* ObjectListScreen.swift */; };
 		C582707C2BD249D200E2059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C582707B2BD249D200E2059B /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50BC0012BD28C0000E00D7F /* ModelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPreview.swift; sourceTree = "<group>"; };
+		C50BC0042BD28C5700E00D7F /* ObjectListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListRowView.swift; sourceTree = "<group>"; };
+		C50BC0072BD291E300E00D7F /* ListRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowStyle.swift; sourceTree = "<group>"; };
 		C58270742BD249D000E2059B /* ObjectManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58270772BD249D000E2059B /* ObjectManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManagementApp.swift; sourceTree = "<group>"; };
 		C58270792BD249D000E2059B /* ObjectListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListScreen.swift; sourceTree = "<group>"; };
@@ -78,9 +84,35 @@
 		C50BBFFC2BD2689300E00D7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C58270792BD249D000E2059B /* ObjectListScreen.swift */,
+				C50BC0032BD28C3D00E00D7F /* ObjectList */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C50BC0002BD28BE900E00D7F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C50BC0062BD291D300E00D7F /* Styles */,
+				C50BC0012BD28C0000E00D7F /* ModelPreview.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C50BC0032BD28C3D00E00D7F /* ObjectList */ = {
+			isa = PBXGroup;
+			children = (
+				C58270792BD249D000E2059B /* ObjectListScreen.swift */,
+				C50BC0042BD28C5700E00D7F /* ObjectListRowView.swift */,
+			);
+			path = ObjectList;
+			sourceTree = "<group>";
+		};
+		C50BC0062BD291D300E00D7F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				C50BC0072BD291E300E00D7F /* ListRowStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		C582706B2BD249D000E2059B = {
@@ -106,6 +138,7 @@
 		C58270762BD249D000E2059B /* ObjectManagement */ = {
 			isa = PBXGroup;
 			children = (
+				C50BC0002BD28BE900E00D7F /* Helpers */,
 				C50BBFFC2BD2689300E00D7F /* Views */,
 				C58270A12BD24B0800E2059B /* Domain */,
 				C58270772BD249D000E2059B /* ObjectManagementApp.swift */,
@@ -290,7 +323,10 @@
 				C58270A62BD24CA900E2059B /* ObjectType.swift in Sources */,
 				C58270A42BD24B3400E2059B /* ObjectEntity.swift in Sources */,
 				C582707A2BD249D000E2059B /* ObjectListScreen.swift in Sources */,
+				C50BC0082BD291E300E00D7F /* ListRowStyle.swift in Sources */,
 				C58270782BD249D000E2059B /* ObjectManagementApp.swift in Sources */,
+				C50BC0052BD28C5700E00D7F /* ObjectListRowView.swift in Sources */,
+				C50BC0022BD28C0000E00D7F /* ModelPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

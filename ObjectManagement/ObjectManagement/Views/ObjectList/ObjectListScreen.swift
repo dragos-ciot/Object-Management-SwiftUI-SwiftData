@@ -9,7 +9,6 @@ import SwiftUI
 import SwiftData
 
 struct ObjectListScreen: View {
-    
     @Query
     private var objectsList: [ObjectEntity]
     
@@ -18,21 +17,12 @@ struct ObjectListScreen: View {
             ForEach(ObjectType.allCases, id: \.self) { objectType in
                 Section {
                     ForEach(objectsList.filter { $0.type == objectType }) { object in
-                        VStack (alignment: .leading, spacing: 6){
-                                Text(object.name)
-                                    .font(.headline)
-                            Text(object.desc)
-                            HStack {
-                                HStack {
-                                    ForEach(object.relations) { containingObject in
-                                        Image(systemName: containingObject.type.icon)
-                                    }
-                                }
-                                Spacer()
-                                Text(object.createdAt, style: .date)
-                            }
-                            .tint(.accentColor)
-                        }
+                        NavigationLink(destination: {
+                            EmptyView()
+                        }, label: {
+                            ObjectListRowView(objectItem: object)
+                        })
+                        .listRowStyle()
                     }
                 } header: {
                     HStack {
@@ -42,6 +32,7 @@ struct ObjectListScreen: View {
                 } footer: {}
             }
         }
+        .listStyle(.plain)
         .navigationTitle("Object List")
     }
 }
