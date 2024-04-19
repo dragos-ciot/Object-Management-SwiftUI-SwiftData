@@ -9,11 +9,17 @@ import SwiftUI
 import SwiftData
 
 struct ObjectListScreen: View {
+    @Environment(ObjectManager.self)
+    private var objectManager
+    
     @Environment(\.modelContext)
     private var modelContext
     
     @Query
     private var objectsList: [ObjectEntity]
+    
+    @State
+    private var searchText = ""
     
     @State
     private var shouldPresentAddObjectSheet = false
@@ -37,9 +43,15 @@ struct ObjectListScreen: View {
                     }
                 } footer: {}
             }
-            .onDelete(perform: deleteObjects)
+            .onDelete { indexSet in
+                objectManager.deleteObjects(
+                    with: modelContext,
+                    at: indexSet,
+                    forObjects: objectsList
+                )
+            }
         }
-        .searchable(text: .constant(""), placement: .toolbar, prompt: Text("Enter your search criteria"))
+        .searchable(text: $searchText, placement: .toolbar, prompt: Text("Enter your search criteria"))
         .listStyle(.plain)
         .sheet(isPresented: $shouldPresentAddObjectSheet) {
             AddObjectSheet()
@@ -56,18 +68,12 @@ struct ObjectListScreen: View {
         }
         .navigationTitle("Object List")
     }
-    
-    func deleteObjects(at offsets: IndexSet) {
-        for offset in offsets {
-            let object = objectsList[offset]
-            modelContext.delete(object)
-        }
-    }
 }
 
 #Preview {
     NavigationStack {
         ObjectListScreen()
+            .environment(ObjectManager())
             .modelContainer(ObjectEntity.previewContainer)
     }
 }

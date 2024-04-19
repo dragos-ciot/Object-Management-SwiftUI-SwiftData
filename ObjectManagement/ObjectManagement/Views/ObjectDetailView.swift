@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct ObjectDetailView: View {
+    @Environment(ObjectManager.self)
+    private var objectManager
+    
+    @Environment(\.modelContext)
+    private var modelContext
+    
+    @Environment(\.dismiss)
+    private var dismiss
+    
     @Bindable
     var objectItem: ObjectEntity
     
@@ -57,7 +66,8 @@ struct ObjectDetailView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    
+                    objectManager.deleteObject(with: modelContext, object: objectItem)
+                    dismiss()
                 } label: {
                     HStack {
                         Text("Remove")
@@ -80,4 +90,5 @@ struct ObjectDetailView: View {
             ObjectDetailView(objectItem: objectModel)
         }
     }
+    .environment(ObjectManager())
 }

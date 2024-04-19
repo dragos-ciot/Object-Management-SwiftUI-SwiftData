@@ -22,4 +22,15 @@ class ObjectManager {
         modelContext.insert(objectEntity)
     }
     
+    func deleteObject(with modelContext: ModelContext, object: ObjectEntity) {
+        modelContext.delete(object)
+    }
+    
+    func deleteObjects(with modelContext: ModelContext, at offsets: IndexSet, forObjects objectsList: [ObjectEntity]) {
+        for offset in offsets {
+            let object = objectsList[offset]
+            modelContext.delete(object)
+        }
+    }
+    
 }
