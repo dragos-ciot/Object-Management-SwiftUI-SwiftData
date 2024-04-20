@@ -24,11 +24,19 @@ struct ObjectListScreen: View {
     @State
     private var shouldPresentAddObjectSheet = false
     
+    var filteredObjects: [ObjectEntity] {
+        if searchText.isEmpty {
+            return objectsList
+        } else {
+            return objectsList.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
+    
     var body: some View {
         List {
             ForEach(ObjectType.allCases, id: \.self) { objectType in
                 Section {
-                    ForEach(objectsList.filter { $0.type == objectType }) { object in
+                    ForEach(filteredObjects.filter { $0.type == objectType }) { object in
                         NavigationLink(destination: {
                             ObjectDetailView(objectItem: object)
                         }, label: {

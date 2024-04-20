@@ -25,6 +25,7 @@
 		C58270952BD249D200E2059B /* ObjectManagementUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270942BD249D200E2059B /* ObjectManagementUITestsLaunchTests.swift */; };
 		C58270A42BD24B3400E2059B /* ObjectEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270A32BD24B3400E2059B /* ObjectEntity.swift */; };
 		C58270A62BD24CA900E2059B /* ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58270A52BD24CA900E2059B /* ObjectType.swift */; };
+		C5EDC3602BD3DD7E00FDE36F /* AddRelationsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EDC35F2BD3DD7E00FDE36F /* AddRelationsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		C58270942BD249D200E2059B /* ObjectManagementUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectManagementUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C58270A32BD24B3400E2059B /* ObjectEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectEntity.swift; sourceTree = "<group>"; };
 		C58270A52BD24CA900E2059B /* ObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectType.swift; sourceTree = "<group>"; };
+		C5EDC35F2BD3DD7E00FDE36F /* AddRelationsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRelationsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				C50BC0092BD2932B00E00D7F /* ObjectDetailView.swift */,
 				C50BC00B2BD2A12100E00D7F /* AddObjectSheet.swift */,
 				C50BC00D2BD2A20E00E00D7F /* ObjectPropertiesView.swift */,
+				C5EDC35F2BD3DD7E00FDE36F /* AddRelationsSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C58270782BD249D000E2059B /* ObjectManagementApp.swift in Sources */,
 				C50BC0052BD28C5700E00D7F /* ObjectListRowView.swift in Sources */,
 				C50BC00E2BD2A20E00E00D7F /* ObjectPropertiesView.swift in Sources */,
+				C5EDC3602BD3DD7E00FDE36F /* AddRelationsSheet.swift in Sources */,
 				C50BC00A2BD2932B00E00D7F /* ObjectDetailView.swift in Sources */,
 				C50BC0022BD28C0000E00D7F /* ModelPreview.swift in Sources */,
 				C50BC00C2BD2A12100E00D7F /* AddObjectSheet.swift in Sources */,
@@ -533,6 +537,7 @@
 				DEVELOPMENT_TEAM = N742CNGJ44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Object Management";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -562,6 +567,7 @@
 				DEVELOPMENT_TEAM = N742CNGJ44;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Object Management";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

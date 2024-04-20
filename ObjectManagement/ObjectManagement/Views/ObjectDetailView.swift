@@ -20,6 +20,9 @@ struct ObjectDetailView: View {
     @Bindable
     var objectItem: ObjectEntity
     
+    @State
+    private var shouldPresentAddRelationship = false
+    
     var body: some View {
         List {
             Section("Edit object") {
@@ -78,8 +81,12 @@ struct ObjectDetailView: View {
             }
             ToolbarItem(placement: .principal) {
                 AddButton(title: "Add relation") {
+                    shouldPresentAddRelationship.toggle()
                 }
             }
+        }
+        .sheet(isPresented: $shouldPresentAddRelationship) {
+            AddRelationsSheet(objectItem: objectItem)
         }
     }
 }

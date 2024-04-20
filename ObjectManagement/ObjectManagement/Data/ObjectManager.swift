@@ -22,6 +22,21 @@ class ObjectManager {
         modelContext.insert(objectEntity)
     }
     
+    func addRelationToObject(with modelContext: ModelContext, objectConfig: NewObjectConfig, object: ObjectEntity) {
+        let objectItem = object
+        
+        let objectEntity = ObjectEntity(
+            name: objectConfig.objectName,
+            type: objectConfig.objectType,
+            relations: [],
+            desc: objectConfig.objectDescription,
+            createdAt: Date.now
+        )
+        
+        objectItem.relations.append(objectEntity)
+    
+    }
+    
     func deleteObject(with modelContext: ModelContext, object: ObjectEntity) {
         modelContext.delete(object)
     }

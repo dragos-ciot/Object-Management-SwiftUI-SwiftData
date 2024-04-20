@@ -13,9 +13,10 @@ class ObjectEntity: Hashable, Equatable, Codable {
     @Attribute(.unique) var objectID: String
     var name: String
     var type: ObjectType
-    var relations: [ObjectEntity]
+    @Relationship(deleteRule: .nullify, inverse: \ObjectEntity.inverseRef) var relations: [ObjectEntity]
     var desc: String
     var createdAt: Date
+    @Relationship var inverseRef: [ObjectEntity]?
     
     init(objectID: String = UUID().uuidString, name: String, type: ObjectType, relations: [ObjectEntity],  desc: String, createdAt: Date) {
         self.objectID = objectID
