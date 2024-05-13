@@ -1,2 +1,2 @@
-# Saal-ObjectManagementSystem
-This is the assessment task that represents an object management system written using Swift and SwiftUI.
+# Object Management System
+An object management system written using Swift, SwiftUI and SwiftData.
